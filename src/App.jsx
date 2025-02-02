@@ -2,6 +2,7 @@ import './App.css'
 import Data from './Data'
 import Tours from './component/Tours'
 import { useState } from 'react'
+import Footer from './component/Footer'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className='App'>
         <Tours tours={tours} removetour={removetour}></Tours>
+        <Footer></Footer>
     </div>
   )
 }
