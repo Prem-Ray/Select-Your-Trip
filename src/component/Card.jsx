@@ -5,7 +5,7 @@ function Card({id,name,info,image,price,removetour}){
 
     const [readmore,setReadmore] = useState(false);
     const description =readmore ? info : `${info.substring(0,200)}....` ;
-
+    
     function readmoreHandler(){
         setReadmore(!readmore) ;
     }
@@ -13,11 +13,13 @@ function Card({id,name,info,image,price,removetour}){
     return(
         <div className='card w-[400px] max-h-fit m-[1rem] p-[1rem] flex flex-col rounded-[10px] item-center shadow-xl '>
             <img src={image} className='image w-[380px] aspect-square object-cover'/>
+            
             <div className='tour-info my-[20px] mx-[5px]'>
                 <div className='tour-details'>
                     <h4 className='tour-price text-green-500 font-bold text-[1.3rem]'>₹{price}</h4>
                     <h4 className='tour-name text-[1.5rem] text-blue-800 font-bold'>{name}</h4>
                 </div>
+
                 <div className='description text-justify'>
                     {description}
                     <span className='read-more text-[#12b0e8] cursor-pointer' onClick={readmoreHandler}>
