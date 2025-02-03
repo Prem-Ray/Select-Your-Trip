@@ -1,4 +1,3 @@
-import './Card.css'
 import { useState } from 'react';
 
 function Card({id,name,info,image,price,removetour}){

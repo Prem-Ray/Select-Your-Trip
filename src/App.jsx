@@ -1,4 +1,3 @@
-import './App.css'
 import Data from './Data'
 import Tours from './component/Tours'
 import { useState } from 'react'
